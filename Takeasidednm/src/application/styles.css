@@ -1,0 +1,15 @@
+/* Change the text color of the movie description label */
+#movieDescriptionLabel {
+    -fx-text-fill: blue;
+}
+
+/* Change the background color of the application */
+.root {
+    -fx-background-color: lightgray;
+}
+
+/* Change the button background and text color */
+.button {
+    -fx-background-color: #FF0000; /* Red background color */
+    -fx-text-fill: white; /* White text color */
+}

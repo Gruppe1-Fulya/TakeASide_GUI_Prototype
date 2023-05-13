@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
    <children>
-      <Label layoutX="320.0" layoutY="133.0" prefHeight="31.0" prefWidth="126.0" text="Take A Side.">
+      <Label layoutX="320.0" layoutY="133.0" prefHeight="31.0" prefWidth="126.0" text="Take A Side." textFill="#ff7700">
          <font>
             <Font name="Century Gothic" size="21.0" />
          </font>
@@ -20,7 +20,7 @@
             <Font name="Century Gothic" size="13.0" />
          </font>
       </TextField>
-      <Button fx:id="loginButton" layoutX="361.0" layoutY="297.0" mnemonicParsing="false" text="login">
+      <Button fx:id="loginButton" layoutX="361.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleLoginLinkClick" text="login">
          <font>
             <Font name="Century Gothic" size="12.0" />
          </font>

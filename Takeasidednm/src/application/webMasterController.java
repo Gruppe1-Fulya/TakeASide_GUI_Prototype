@@ -14,14 +14,31 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class webMasterController implements Initializable{
 
+	
+	@FXML
+	private Button loginButton;
+	@FXML
+    private TextField loginIdTextField;
+	@FXML
+    private TextField loginTnoTextField;
+	@FXML
+    private TextField SingInNameTextField;
+	@FXML
+    private TextField SingInSurnameTextField;
+	@FXML
+    private TextField SingInIdTextField;
+	@FXML
+    private TextField SingInTnoTextField;
 	@FXML
     private ComboBox<String> genderComboBox;
 	@FXML
-	private Button loginButton;
+	private Button submitButton;
+	
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

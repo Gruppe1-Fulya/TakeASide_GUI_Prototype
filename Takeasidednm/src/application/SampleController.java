@@ -71,6 +71,29 @@ public class SampleController {
             e.printStackTrace();
         } 
      }
+     
+     @FXML
+     public void handleLoginLinkClick(ActionEvent event) {
+         try {
+             // Load the FXML file for the new window
+         	FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/Homepage.fxml"));
+             Parent root = loader.load();
+
+             // Create a new stage/window
+             Stage newStage = new Stage();
+             newStage.setScene(new Scene(root));
+             newStage.setTitle("Homepage");
+
+             // Show the new window
+             newStage.show();
+
+             // Close the current window
+             Stage currentStage = (Stage) loginButton.getScene().getWindow();
+             currentStage.close();
+         } catch (IOException e) {
+             e.printStackTrace();
+         }
+     }
 
     @FXML
     public void initialize() {
