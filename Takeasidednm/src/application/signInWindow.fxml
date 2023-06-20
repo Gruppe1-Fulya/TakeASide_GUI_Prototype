@@ -37,7 +37,7 @@
             <Font name="Century Gothic" size="23.0" />
          </font>
       </Label>
-      <Button fx:id="submitButton" layoutX="352.0" layoutY="348.0" mnemonicParsing="false" text="Submit">
+      <Button fx:id="submitButton" layoutX="352.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleSubmitClick" text="Submit">
          <font>
             <Font name="Century Gothic" size="13.0" />
          </font>

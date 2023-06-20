@@ -23,8 +23,8 @@
       <Separator layoutX="380.0" orientation="VERTICAL" prefHeight="450.0" prefWidth="5.0" />
       <TextField fx:id="loginIdTextField" layoutX="122.0" layoutY="131.0" promptText="Identity No" />
       <TextField fx:id="loginTnoTextField" layoutX="123.0" layoutY="178.0" promptText="Tno" />
-      <TextField fx:id="SingInNameTextField" layoutX="497.0" layoutY="134.0" prefHeight="23.0" prefWidth="154.0" promptText="Name" />
-      <TextField fx:id="SingInSurnameTextField" layoutX="498.0" layoutY="178.0" promptText="Surname">
+      <TextField fx:id="SignInNameTextField" layoutX="497.0" layoutY="134.0" prefHeight="23.0" prefWidth="154.0" promptText="Name" />
+      <TextField fx:id="SignInSurnameTextField" layoutX="498.0" layoutY="178.0" promptText="Surname">
          <font>
             <Font name="Century Gothic" size="12.0" />
          </font>
@@ -35,17 +35,17 @@
             <Font name="Century Gothic" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="submitButton" layoutX="547.0" layoutY="364.0" mnemonicParsing="false" text="Submit">
+      <Button fx:id="submitButton" layoutX="547.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleSubmitClick" text="Submit">
          <font>
             <Font name="Century Gothic" size="12.0" />
          </font>
       </Button>
-      <TextField fx:id="SingInIdTextField" layoutX="499.0" layoutY="220.0" promptText="Identity No">
+      <TextField fx:id="SignInIdTextField" layoutX="499.0" layoutY="220.0" promptText="Identity No">
          <font>
             <Font name="Century Gothic" size="12.0" />
          </font>
       </TextField>
-      <TextField fx:id="SingInTnoTextField" layoutX="499.0" layoutY="262.0" promptText="Tno">
+      <TextField fx:id="SignInTnoTextField" layoutX="499.0" layoutY="262.0" promptText="Tno">
          <font>
             <Font name="Century Gothic" size="12.0" />
          </font>

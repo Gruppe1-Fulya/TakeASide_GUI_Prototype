@@ -133,14 +133,14 @@
             <Font name="Century Gothic" size="12.0" />
          </font>
       </TextField>
-      <Button fx:id="addMovieSubmitButton" layoutX="87.0" layoutY="368.0" mnemonicParsing="false" text="Submit" />
-      <Button fx:id="addBookSubmitButton" layoutX="305.0" layoutY="368.0" mnemonicParsing="false" text="Submit" />
-      <Button fx:id="addGameSubmitButton" layoutX="527.0" layoutY="368.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="addMovieSubmitButton" layoutX="87.0" layoutY="368.0" mnemonicParsing="false" onAction="#addMovie" text="Submit" />
+      <Button fx:id="addBookSubmitButton" layoutX="305.0" layoutY="368.0" mnemonicParsing="false" onAction="#addBook" text="Submit" />
+      <Button fx:id="addGameSubmitButton" layoutX="527.0" layoutY="368.0" mnemonicParsing="false" onAction="#addGame" text="Submit" />
       <TextField fx:id="deleteUserEmailTextField" layoutX="696.0" layoutY="127.0" promptText="email">
          <font>
             <Font name="Century Gothic" size="12.0" />
          </font>
       </TextField>
-      <Button fx:id="deleteUserDeleteButton" layoutX="745.0" layoutY="181.0" mnemonicParsing="false" text="Delete" textFill="#b92020" />
+      <Button fx:id="deleteUserDeleteButton" layoutX="745.0" layoutY="181.0" mnemonicParsing="false" onAction="#HandleDelete" text="Delete" textFill="#b92020" />
    </children>
 </AnchorPane>

@@ -52,7 +52,7 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TextField fx:id="moviepageSearchBarTextField" layoutX="615.0" layoutY="25.0" promptText="search movie">
+                        <TextField fx:id="moviepageSearchBarTextField" layoutX="592.0" layoutY="24.0" promptText="search movie">
                            <font>
                               <Font name="Century Gothic" size="12.0" />
                            </font>
@@ -84,12 +84,12 @@
                            </font>
                         </TextField>
                         <ListView fx:id="moviepageMoviesListView" layoutX="284.0" layoutY="53.0" prefHeight="304.0" prefWidth="217.0" />
-                        <Button fx:id="moviepageFilterButton" layoutX="101.0" layoutY="319.0" mnemonicParsing="false" text="Filter">
+                        <Button fx:id="moviepageFilterButton" layoutX="101.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleMovieFilter" text="Filter">
                            <font>
                               <Font name="Century Gothic" size="13.0" />
                            </font>
                         </Button>
-                        <Button fx:id="moviepageLikeButton" alignment="CENTER" blendMode="HARD_LIGHT" graphicTextGap="0.0" layoutX="625.0" layoutY="318.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" textFill="WHITE">
+                        <Button fx:id="moviepageLikeButton" alignment="CENTER" blendMode="HARD_LIGHT" graphicTextGap="0.0" layoutX="625.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleMovieLike" prefHeight="25.0" prefWidth="30.0" textFill="WHITE">
                            <graphic>
                               <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -97,7 +97,7 @@
                                  </image>
                               </ImageView>
                            </graphic></Button>
-                        <Button fx:id="moviepageDislikeButton" blendMode="HARD_LIGHT" graphicTextGap="0.0" layoutX="707.0" layoutY="318.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="38.0">
+                        <Button fx:id="moviepageDislikeButton" blendMode="HARD_LIGHT" graphicTextGap="0.0" layoutX="707.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleMovieDisike" prefHeight="37.0" prefWidth="38.0">
                            <graphic>
                               <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -110,7 +110,19 @@
                               <Font name="Century Gothic" size="11.0" />
                            </font>
                         </Label>
-                        <TextArea fx:id="moviepageDescriptionTextArea" layoutX="592.0" layoutY="70.0" prefHeight="230.0" prefWidth="200.0" />
+                        <TextArea fx:id="moviepageDescriptionTextArea" layoutX="592.0" layoutY="70.0" prefHeight="230.0" prefWidth="200.0">
+                           <font>
+                              <Font name="Century Gothic" size="11.0" />
+                           </font></TextArea>
+                        <Button fx:id="moviepageSearchButton" blendMode="HARD_LIGHT" layoutX="754.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleMovieSearch" prefHeight="28.0" prefWidth="32.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/searchicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
                      </children>
                   </AnchorPane>
                </content>
@@ -119,7 +131,7 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TextField fx:id="bookpageSearchBarTextField" layoutX="615.0" layoutY="25.0" promptText="search book">
+                        <TextField fx:id="bookpageSearchBarTextField" layoutX="592.0" layoutY="25.0" promptText="search book">
                            <font>
                               <Font name="Century Gothic" size="12.0" />
                            </font>
@@ -146,12 +158,12 @@
                            </font>
                         </TextField>
                         <ListView fx:id="bookpageBooksListView" layoutX="284.0" layoutY="53.0" prefHeight="304.0" prefWidth="217.0" />
-                        <Button fx:id="bookpageFilterButton" layoutX="101.0" layoutY="319.0" mnemonicParsing="false" text="Filter">
+                        <Button fx:id="bookpageFilterButton" layoutX="101.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleBookFilter" text="Filter">
                            <font>
                               <Font name="Century Gothic" size="13.0" />
                            </font>
                         </Button>
-                        <Button fx:id="bookpageLikeButton" blendMode="HARD_LIGHT" layoutX="625.0" layoutY="318.0" mnemonicParsing="false">
+                        <Button fx:id="bookpageLikeButton" blendMode="HARD_LIGHT" layoutX="625.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleBookLike">
                            <graphic>
                               <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -159,7 +171,7 @@
                                  </image>
                               </ImageView>
                            </graphic></Button>
-                        <Button fx:id="bookpageDislikeButton" blendMode="HARD_LIGHT" layoutX="707.0" layoutY="318.0" mnemonicParsing="false">
+                        <Button fx:id="bookpageDislikeButton" blendMode="HARD_LIGHT" layoutX="707.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleBookDisike">
                            <graphic>
                               <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -172,7 +184,19 @@
                               <Font name="Century Gothic" size="11.0" />
                            </font>
                         </Label>
-                        <TextArea fx:id="bookpageDescriptionTextArea" layoutX="592.0" layoutY="70.0" prefHeight="230.0" prefWidth="200.0" />
+                        <TextArea fx:id="bookpageDescriptionTextArea" layoutX="592.0" layoutY="70.0" prefHeight="230.0" prefWidth="200.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font></TextArea>
+                        <Button fx:id="bookpageSearchButton" blendMode="HARD_LIGHT" layoutX="754.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleBookSearch" prefHeight="28.0" prefWidth="32.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/searchicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
                      </children>
                   </AnchorPane>
                </content>
@@ -181,7 +205,7 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TextField fx:id="gamepageSearchBarTextField" layoutX="615.0" layoutY="25.0" promptText="search book">
+                        <TextField fx:id="gamepageSearchBarTextField" layoutX="592.0" layoutY="24.0" promptText="search game">
                            <font>
                               <Font name="Century Gothic" size="12.0" />
                            </font>
@@ -213,12 +237,12 @@
                            </font>
                         </TextField>
                         <ListView fx:id="gamepageGamesListView" layoutX="284.0" layoutY="53.0" prefHeight="304.0" prefWidth="217.0" />
-                        <Button fx:id="gamepageFilterButton" layoutX="101.0" layoutY="319.0" mnemonicParsing="false" text="Filter">
+                        <Button fx:id="gamepageFilterButton" layoutX="101.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleGameFilter" text="Filter">
                            <font>
                               <Font name="Century Gothic" size="13.0" />
                            </font>
                         </Button>
-                        <Button fx:id="gamepageLikeButton" blendMode="HARD_LIGHT" layoutX="625.0" layoutY="318.0" mnemonicParsing="false">
+                        <Button fx:id="gamepageLikeButton" blendMode="HARD_LIGHT" layoutX="625.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleGameLike">
                            <graphic>
                               <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -226,7 +250,7 @@
                                  </image>
                               </ImageView>
                            </graphic></Button>
-                        <Button fx:id="gamepageDislikeButton" blendMode="HARD_LIGHT" layoutX="707.0" layoutY="318.0" mnemonicParsing="false">
+                        <Button fx:id="gamepageDislikeButton" blendMode="HARD_LIGHT" layoutX="707.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleGameDisike">
                            <graphic>
                               <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -239,12 +263,29 @@
                               <Font name="Century Gothic" size="11.0" />
                            </font>
                         </Label>
-                        <TextArea fx:id="gamepageDescriptionTextArea" layoutX="592.0" layoutY="70.0" prefHeight="230.0" prefWidth="200.0" />
+                        <TextArea fx:id="gamepageDescriptionTextArea" layoutX="592.0" layoutY="70.0" prefHeight="230.0" prefWidth="200.0">
+                           <font>
+                              <Font name="Century Gothic" size="11.0" />
+                           </font></TextArea>
+                        <Button fx:id="gamepageSearchButton" blendMode="HARD_LIGHT" layoutX="754.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleGameSearch" prefHeight="30.0" prefWidth="31.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/searchicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
         </tabs>
       </TabPane>
+      <Label fx:id="emailLabel" layoutX="14.0" layoutY="5.0">
+         <font>
+            <Font name="Century Gothic" size="11.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

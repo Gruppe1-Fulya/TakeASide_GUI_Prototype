@@ -15,7 +15,7 @@
             <Font name="Century Gothic" size="21.0" />
          </font>
       </Label>
-      <TextField layoutX="276.0" layoutY="191.0" prefHeight="24.0" prefWidth="214.0" promptText="email">
+      <TextField fx:id="emailField" layoutX="276.0" layoutY="191.0" prefHeight="24.0" prefWidth="214.0" promptText="email">
          <font>
             <Font name="Century Gothic" size="13.0" />
          </font>
